@@ -98,13 +98,31 @@
   max_detail: 6
 
 # ------------------- BURSA -------------------
-- name: BUSMEK Etkinlik Takvimi
+- name: Bursa Kültür AŞ
   city: Bursa
   lat: 40.19
   lng: 29.06
-  url: https://busmek.bursa.bel.tr/tr/kategori/etkinlik-takvimi-21/
-  base: https://busmek.bursa.bel.tr
-  item: "a[href*='/tr/'], article a"
+  url: https://bursakultur.com/TR/etkinlikler
+  base: https://bursakultur.com
+  item: "a[href*='etkinlikdetay'], a[href*='etkinlik']"
+  max_detail: 12
+
+- name: Nilüfer Belediyesi Bilet
+  city: Bursa
+  lat: 40.21
+  lng: 28.99
+  url: https://bilet.nilufer.bel.tr/
+  base: https://bilet.nilufer.bel.tr
+  item: "a[href*='etkinlik'], a[href*='detay'], a[href*='mekan']"
+  max_detail: 10
+
+- name: Nilüfer Belediyesi Etkinlikler
+  city: Bursa
+  lat: 40.21
+  lng: 28.99
+  url: https://www.nilufer.bel.tr/etkinlikler
+  base: https://www.nilufer.bel.tr
+  item: "a[href*='etkinlik'], article a"
   max_detail: 10
 
 - name: Bursa Kültür Sanat
