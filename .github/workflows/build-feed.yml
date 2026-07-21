@@ -1,0 +1,35 @@
+name: Feed Guncelle
+
+on:
+  schedule:
+    - cron: '0 4,14 * * *'   # her gun 07:00 ve 17:00 (TR saati)
+  workflow_dispatch:          # elle calistirma butonu
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Bagimliliklari kur
+        run: pip install -r scraper/requirements.txt
+
+      - name: Feed olustur
+        env:
+          TM_API_KEY: ${{ secrets.TM_API_KEY }}
+        run: python scraper/main.py
+
+      - name: Degisiklikleri kaydet
+        run: |
+          git config user.name "feed-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add docs/feed.json
+          git diff --cached --quiet || git commit -m "feed guncellendi"
+          git push
