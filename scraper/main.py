@@ -71,7 +71,7 @@ def main():
     }
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
-        json.dump(feed, f, ensure_ascii=False, indent=1)
+        json.dump(feed, f, ensure_ascii=False, separators=(",", ":"))
 
     print("\n--- OZET ---")
     for k, v in stats.items():
