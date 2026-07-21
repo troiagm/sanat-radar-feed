@@ -73,9 +73,18 @@
   city: İzmir
   lat: 38.42
   lng: 27.14
-  url: https://kultursanat.izmir.bel.tr/etkinlikler
+  url: https://kultursanat.izmir.bel.tr/
   base: https://kultursanat.izmir.bel.tr
-  item: "a[href*='etkinlik'], article a, .event a"
+  item: "a[href*='etkinlik'], a[href*='Etkinlik'], a[href*='Detay']"
+  max_detail: 10
+
+- name: İzmir Art
+  city: İzmir
+  lat: 38.42
+  lng: 27.14
+  url: https://www.izmir.art/
+  base: https://www.izmir.art
+  item: "a[href*='izmir.art'], article a, a[href^='/']"
   max_detail: 10
 
 - name: Arkas Sanat Merkezi
