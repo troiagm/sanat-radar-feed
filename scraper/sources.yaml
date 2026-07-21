@@ -1,0 +1,90 @@
+# SanatRadar web kaynaklari
+#
+# Yeni kaynak eklemek icin ayni kalibi kopyala. "item" alani, liste
+# sayfasindaki etkinlik linklerini secen CSS secicisidir. Ilk calistirmadan
+# sonra Actions logunda her kaynagin kac etkinlik verdigini gor; 0 veren
+# olursa seciciyi birlikte inceltiriz.
+#
+# NOT: Bu seciciler baslangic degerleridir; siteler tasarim degistirdikce
+# guncellenmeleri gerekebilir (uygulamaya dokunmadan, sadece bu dosyada).
+
+# ------------------- ISTANBUL -------------------
+- name: İBB Kültür Sanat
+  city: İstanbul
+  lat: 41.01
+  lng: 28.98
+  url: https://kultursanat.istanbul/etkinliklerimiz
+  base: https://kultursanat.istanbul
+  item: "a[href*='etkinlik']"
+  max_detail: 12
+
+- name: Kültür İstanbul
+  city: İstanbul
+  lat: 41.01
+  lng: 28.98
+  url: https://kultur.istanbul/etkinlikler/
+  base: https://kultur.istanbul
+  item: "article a, .event a, a[href*='etkinlik']"
+  max_detail: 10
+
+# Ulusal sanat takvimi (cogu Istanbul; basliktan sehir ayrimi yapilamadigi
+# icin Istanbul olarak etiketlenir)
+- name: Artful Living Takvim
+  city: İstanbul
+  lat: 41.01
+  lng: 28.98
+  url: https://www.artfulliving.com.tr/takvim/liste
+  base: https://www.artfulliving.com.tr
+  item: "a[href*='/takvim/']"
+  category: sergi
+  max_detail: 10
+
+# ------------------- ANKARA -------------------
+- name: CerModern
+  city: Ankara
+  lat: 39.93
+  lng: 32.85
+  url: https://www.cermodern.org/sergiler
+  base: https://www.cermodern.org
+  item: "a[href*='sergi'], .sergi a, article a"
+  category: sergi
+  max_detail: 8
+
+- name: ABB Kültür
+  city: Ankara
+  lat: 39.93
+  lng: 32.86
+  url: https://kultur.ankara.bel.tr/etkinlikler
+  base: https://kultur.ankara.bel.tr
+  item: "a[href*='etkinlik']"
+  max_detail: 10
+
+# ------------------- IZMIR -------------------
+- name: İzmir BB Kültür Sanat
+  city: İzmir
+  lat: 38.42
+  lng: 27.14
+  url: https://kultursanat.izmir.bel.tr/etkinlikler
+  base: https://kultursanat.izmir.bel.tr
+  item: "a[href*='etkinlik']"
+  max_detail: 10
+
+- name: Arkas Sanat Merkezi
+  city: İzmir
+  lat: 38.43
+  lng: 27.13
+  url: https://www.arkassanatmerkezi.com/sergiler
+  base: https://www.arkassanatmerkezi.com
+  item: "a[href*='sergi'], article a"
+  category: sergi
+  max_detail: 6
+
+# ------------------- BURSA -------------------
+- name: Bursa BB Kültür Sanat
+  city: Bursa
+  lat: 40.19
+  lng: 29.06
+  url: https://kultursanat.bursa.com.tr/etkinlikler
+  base: https://kultursanat.bursa.com.tr
+  item: "a[href*='etkinlik']"
+  max_detail: 10
