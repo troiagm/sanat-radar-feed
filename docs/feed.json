@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-21T04:24:13.925157+00:00",
+ "generated_at": "2026-07-21T04:29:55.312330+00:00",
  "stats": {
   "ticketmaster": 1000,
   "İBB Kültür Sanat": 16,
@@ -8,11 +8,11 @@
   "ABB Etkinlikler": 26,
   "ABB Kültür Takvimi": 2,
   "Çankaya Kültür Sanat": 29,
-  "CerModern": "HATA: 415 Client Error: Unsupported Media Type for url: https://www.cermodern.org/sergiler",
+  "CerModern": 3,
   "İzmir BB Kültür Sanat": 40,
   "İzmir Art": 40,
   "Arkas Sanat Merkezi": 30,
-  "Bursa Kültür AŞ": 0,
+  "BUSMEK Etkinlik Takvimi": 0,
   "Bursa Kültür Sanat": 3
  },
  "events": [
@@ -351,6 +351,22 @@
    "price_max": null,
    "currency": null,
    "source": "ABB Etkinlikler"
+  },
+  {
+   "id": "src_9e5672efafc1",
+   "name": "Geçmiş Sergiler",
+   "date": "2026-07-21T12:00:00",
+   "city": "Ankara",
+   "venue": "CerModern",
+   "lat": 39.93,
+   "lng": 32.85,
+   "category": "sergi",
+   "url": "https://www.cermodern.org/sergiler?filter=history",
+   "image": null,
+   "price_min": null,
+   "price_max": null,
+   "currency": null,
+   "source": "CerModern"
   },
   {
    "id": "tm_Z2HyzZyMZk920Avve",
@@ -9457,6 +9473,38 @@
    "source": "ticketmaster"
   },
   {
+   "id": "src_66c0bf98261e",
+   "name": "Sergiler +",
+   "date": "2026-08-30T12:00:00",
+   "city": "Ankara",
+   "venue": "CerModern",
+   "lat": 39.93,
+   "lng": 32.85,
+   "category": "sergi",
+   "url": "https://www.cermodern.org/sergiler",
+   "image": null,
+   "price_min": null,
+   "price_max": null,
+   "currency": null,
+   "source": "CerModern"
+  },
+  {
+   "id": "src_0d6ba543b62d",
+   "name": "Güncel Sergiler",
+   "date": "2026-08-30T12:00:00",
+   "city": "Ankara",
+   "venue": "CerModern",
+   "lat": 39.93,
+   "lng": 32.85,
+   "category": "sergi",
+   "url": "https://www.cermodern.org/sergiler?filter=current",
+   "image": null,
+   "price_min": null,
+   "price_max": null,
+   "currency": null,
+   "source": "CerModern"
+  },
+  {
    "id": "tm_Z2HyzZyMZku589vve",
    "name": "Lvbel C5",
    "date": "2026-08-30T17:30:00",
@@ -10751,22 +10799,6 @@
    "price_max": null,
    "currency": null,
    "source": "ticketmaster"
-  },
-  {
-   "id": "src_4f9b5a6d78b0",
-   "name": "Üye Girişi | Üye Ol",
-   "date": "2026-09-09T12:00:00",
-   "city": "İzmir",
-   "venue": "İzmir Art",
-   "lat": 38.42,
-   "lng": 27.14,
-   "category": "diger",
-   "url": "https://www.izmir.art/oauth2/loginWithBizIzmir",
-   "image": null,
-   "price_min": null,
-   "price_max": null,
-   "currency": null,
-   "source": "İzmir Art"
   },
   {
    "id": "tm_Z2HyzZyMZkfGG_vve",
@@ -18479,6 +18511,22 @@
    "price_max": null,
    "currency": null,
    "source": "İzmir BB Kültür Sanat"
+  },
+  {
+   "id": "src_4f9b5a6d78b0",
+   "name": "Üye Girişi | Üye Ol",
+   "date": null,
+   "city": "İzmir",
+   "venue": "İzmir Art",
+   "lat": 38.42,
+   "lng": 27.14,
+   "category": "diger",
+   "url": "https://www.izmir.art/oauth2/loginWithBizIzmir",
+   "image": null,
+   "price_min": null,
+   "price_max": null,
+   "currency": null,
+   "source": "İzmir Art"
   },
   {
    "id": "src_48f712e847af",
