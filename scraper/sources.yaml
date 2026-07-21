@@ -98,14 +98,14 @@
   max_detail: 6
 
 # ------------------- BURSA -------------------
-- name: Bursa Kültür AŞ
+- name: BUSMEK Etkinlik Takvimi
   city: Bursa
   lat: 40.19
   lng: 29.06
-  url: https://bursakultur.com/TR/etkinlikler/12/
-  base: https://bursakultur.com
-  item: "a[href*='etkinlik']"
-  max_detail: 12
+  url: https://busmek.bursa.bel.tr/tr/kategori/etkinlik-takvimi-21/
+  base: https://busmek.bursa.bel.tr
+  item: "a[href*='/tr/'], article a"
+  max_detail: 10
 
 - name: Bursa Kültür Sanat
   city: Bursa
