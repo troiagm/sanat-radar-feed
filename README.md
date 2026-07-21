@@ -6,7 +6,7 @@ Bursa'nın sergi/atölye kaynakları → `docs/feed.json`.
 
 Faydaları:
 - Ticketmaster API anahtarı artık uygulamaya gömülmez (sadece burada,
-  gizli değişken olarak durur) → anahtar çalınamaz, kota herkes için yetmez
+  gizli değişken olarak durur.) → anahtar çalınamaz, kota herkes için yetmez
   diye bir dert kalmaz (günde 2 çekim, sınırsız kullanıcı).
 - Sergi ve atölyeler yapılandırılmış etkinlik olarak uygulamaya girer.
 - Kaynak eklemek/düzeltmek için uygulamayı güncellemek gerekmez; sadece
