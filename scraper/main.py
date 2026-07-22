@@ -77,6 +77,16 @@ def slug(name: str) -> str:
 SLUG_TO_PROVINCE = {slug(p): p for p in PROVINCES}
 
 
+def haversine_km(lat1, lng1, lat2, lng2):
+    r = 6371.0
+    dlat = math.radians(lat2 - lat1)
+    dlng = math.radians(lng2 - lng1)
+    a = (math.sin(dlat / 2) ** 2
+         + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2))
+         * math.sin(dlng / 2) ** 2)
+    return r * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+
 def nearest_province(lat, lng):
     best, best_d = None, 1e9
     for name, (plat, plng) in PROVINCES.items():
@@ -147,14 +157,36 @@ def main():
             continue
         by_city.setdefault(prov, []).append(e)
 
-    for prov, evs in by_city.items():
+    # Her il dosyasina KOMSU illerin etkinliklerini de ekle: kullanici il
+    # sinirinin dibindeyse (orn. Yalova'dan Istanbul) yaricap icindeki
+    # etkinlikleri kacirmasin. Fazlaliklari uygulama mesafeye gore eler.
+    NEIGHBOR_KM = 150
+    for prov, (plat, plng) in PROVINCES.items():
+        evs = list(by_city.get(prov, []))
+        seen = {e["id"] for e in evs}
+        for other, (olat, olng) in PROVINCES.items():
+            if other == prov:
+                continue
+            if haversine_km(plat, plng, olat, olng) > NEIGHBOR_KM:
+                continue
+            for e in by_city.get(other, []):
+                if e["id"] in seen:
+                    continue
+                # Komsu ilden sadece koordinati olan ve gercekten yakin
+                # olanlari al (koordinatsizlar yanlis sehirde gorunmesin).
+                if e.get("lat") is None or e.get("lng") is None:
+                    continue
+                if haversine_km(plat, plng, e["lat"], e["lng"]) <= NEIGHBOR_KM:
+                    evs.append(e)
+                    seen.add(e["id"])
+        evs.sort(key=lambda e: e.get("date") or "9999")
         dump(os.path.join(DOCS, "cities", f"{slug(prov)}.json"),
              {"generated_at": now, "city": prov, "events": evs})
 
     print("\n--- OZET ---")
     for k, v in stats.items():
         print(f"{k}: {v}")
-    print(f"TOPLAM (tekil): {len(merged)}, il dosyasi: {len(by_city)}, "
+    print(f"TOPLAM (tekil): {len(merged)}, il dosyasi: {len(PROVINCES)}, "
           f"atanamayan: {unassigned}")
     for prov in sorted(by_city, key=lambda p: -len(by_city[p]))[:10]:
         print(f"  {prov}: {len(by_city[prov])}")
