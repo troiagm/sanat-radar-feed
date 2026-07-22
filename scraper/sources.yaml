@@ -1,9 +1,17 @@
-# SanatRadar web kaynaklari — surum 2
-# 0 veya HATA veren kaynaklarin logunu Claude'a yapistir, birlikte inceltelim.
+# ArteVille web kaynaklari
+#
+# venue alani:
+#   - Kaynak GERCEK bir mekansa (galeri, muze, sanat merkezi) adini yaz;
+#     kartta "CerModern, Ankara" gibi gorunur.
+#   - Kaynak bir liste/duyuru sitesiyse ("... Takvim", "... Etkinlikler")
+#     BOS birak; kartta sadece sehir gorunur. Etkinligin gercek mekani
+#     sayfada standart bir yerde yazmadigi icin uydurmak yerine
+#     gostermemek daha dogru.
 
 # ------------------- ISTANBUL -------------------
 - name: İBB Kültür Sanat
   city: İstanbul
+  venue: ""
   lat: 41.01
   lng: 28.98
   url: https://kultursanat.istanbul/etkinliklerimiz
@@ -13,6 +21,7 @@
 
 - name: Kültür İstanbul
   city: İstanbul
+  venue: ""
   lat: 41.01
   lng: 28.98
   url: https://kultur.istanbul/etkinlikler/
@@ -22,6 +31,7 @@
 
 - name: Artful Living Takvim
   city: İstanbul
+  venue: ""
   lat: 41.01
   lng: 28.98
   url: https://www.artfulliving.com.tr/takvim
@@ -33,6 +43,7 @@
 # ------------------- ANKARA -------------------
 - name: ABB Etkinlikler
   city: Ankara
+  venue: ""
   lat: 39.93
   lng: 32.86
   url: https://www.ankara.bel.tr/etkinlikler
@@ -42,6 +53,7 @@
 
 - name: ABB Kültür Takvimi
   city: Ankara
+  venue: ""
   lat: 39.93
   lng: 32.86
   url: https://kultursanat.ankara.bel.tr/aylik-etkinlik-takvimi
@@ -51,6 +63,7 @@
 
 - name: Çankaya Kültür Sanat
   city: Ankara
+  venue: "Çankaya Belediyesi"
   lat: 39.90
   lng: 32.86
   url: https://www.cankaya.bel.tr/kultur-sanat
@@ -60,6 +73,7 @@
 
 - name: CerModern
   city: Ankara
+  venue: "CerModern"
   lat: 39.93
   lng: 32.85
   url: https://www.cermodern.org/sergiler
@@ -71,6 +85,7 @@
 # ------------------- IZMIR -------------------
 - name: İzmir BB Kültür Sanat
   city: İzmir
+  venue: ""
   lat: 38.42
   lng: 27.14
   url: https://kultursanat.izmir.bel.tr/
@@ -80,6 +95,7 @@
 
 - name: İzmir Art
   city: İzmir
+  venue: ""
   lat: 38.42
   lng: 27.14
   url: https://www.izmir.art/
@@ -89,6 +105,7 @@
 
 - name: Arkas Sanat Merkezi
   city: İzmir
+  venue: "Arkas Sanat Merkezi"
   lat: 38.43
   lng: 27.13
   url: https://www.arkassanatmerkezi.com/sergiler
@@ -100,6 +117,7 @@
 # ------------------- BURSA -------------------
 - name: Bursa Kültür AŞ
   city: Bursa
+  venue: ""
   lat: 40.19
   lng: 29.06
   url: https://bursakultur.com/TR/etkinlikler
@@ -109,6 +127,7 @@
 
 - name: Nilüfer Belediyesi Bilet
   city: Bursa
+  venue: "Nilüfer Belediyesi"
   lat: 40.21
   lng: 28.99
   url: https://bilet.nilufer.bel.tr/
@@ -118,6 +137,7 @@
 
 - name: Nilüfer Belediyesi Etkinlikler
   city: Bursa
+  venue: "Nilüfer Belediyesi"
   lat: 40.21
   lng: 28.99
   url: https://www.nilufer.bel.tr/etkinlikler
@@ -127,6 +147,7 @@
 
 - name: Bursa Kültür Sanat
   city: Bursa
+  venue: "Bursa Kültür Sanat"
   lat: 40.19
   lng: 29.06
   url: https://www.bursakultursanat.com/
