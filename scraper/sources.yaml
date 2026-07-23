@@ -279,3 +279,34 @@
   base: https://mentese.bel.tr
   item: "a[href*='etkinlik'], a[href*='haber'], article a"
   max_detail: 8
+
+  # ======================= ANTALYA =======================
+- name: Antalya BB Etkinlikler
+  city: Antalya
+  venue: ""
+  lat: 36.90
+  lng: 30.70
+  url: https://www.antalya.bel.tr/etkinlikler
+  base: https://www.antalya.bel.tr
+  item: "a[href*='etkinlik-detay'], a[href*='etkinlik']"
+  max_detail: 12
+
+- name: Antalya Kültür Sanat
+  city: Antalya
+  venue: "Antalya Kültür Sanat"
+  lat: 36.89
+  lng: 30.71
+  url: https://www.antalyakultursanat.org.tr/
+  base: https://www.antalyakultursanat.org.tr
+  item: "a[href*='sergi'], a[href*='etkinlik'], a[href*='atolye'], article a"
+  max_detail: 10
+
+- name: Muratpaşa Belediyesi
+  city: Antalya
+  venue: "Muratpaşa Belediyesi"
+  lat: 36.88
+  lng: 30.71
+  url: https://muratpasa-bld.gov.tr/etkinlikler
+  base: https://muratpasa-bld.gov.tr
+  item: "a[href*='etkinlik'], article a"
+  max_detail: 10
