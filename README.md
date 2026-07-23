@@ -12,7 +12,7 @@ Faydaları:
 - Kaynak eklemek/düzeltmek için uygulamayı güncellemek gerekmez; sadece
   `scraper/sources.yaml` düzenlenir.
 
-## Kurulum (bir kez, ~15 dakika)
+## Kurulum (bir kez, ~15 dakika.)
 
 1. **GitHub hesabı** yoksa github.com'dan aç (ücretsiz).
 2. Sağ üstte **+ → New repository** → ad: `sanat-radar-feed` →
