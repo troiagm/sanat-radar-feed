@@ -1,14 +1,13 @@
 # ArteVille web kaynaklari
 #
 # venue alani:
-#   - Kaynak GERCEK bir mekansa (galeri, muze, sanat merkezi) adini yaz;
-#     kartta "CerModern, Ankara" gibi gorunur.
-#   - Kaynak bir liste/duyuru sitesiyse ("... Takvim", "... Etkinlikler")
-#     BOS birak; kartta sadece sehir gorunur. Etkinligin gercek mekani
-#     sayfada standart bir yerde yazmadigi icin uydurmak yerine
-#     gostermemek daha dogru.
+#   - Kaynak GERCEK bir mekansa adini yaz ("CerModern, Ankara" gibi gorunur).
+#   - Kaynak bir liste/duyuru sitesiyse BOS birak; kartta sadece sehir cikar.
+#
+# Yeni kaynak eklerken kalibi kopyala, Actions logundaki OZET bolumunden
+# kac etkinlik geldigini kontrol et. 0 verenlerin "item" secicisi duzeltilir.
 
-# ------------------- ISTANBUL -------------------
+# ======================= ISTANBUL =======================
 - name: İBB Kültür Sanat
   city: İstanbul
   venue: ""
@@ -40,7 +39,7 @@
   category: sergi
   max_detail: 10
 
-# ------------------- ANKARA -------------------
+# ======================= ANKARA =======================
 - name: ABB Etkinlikler
   city: Ankara
   venue: ""
@@ -82,7 +81,7 @@
   category: sergi
   max_detail: 8
 
-# ------------------- IZMIR -------------------
+# ======================= IZMIR =======================
 - name: İzmir BB Kültür Sanat
   city: İzmir
   venue: ""
@@ -114,7 +113,7 @@
   category: sergi
   max_detail: 6
 
-# ------------------- BURSA -------------------
+# ======================= BURSA =======================
 - name: Bursa Kültür AŞ
   city: Bursa
   venue: ""
@@ -154,3 +153,129 @@
   base: https://www.bursakultursanat.com
   item: "a[href*='etkinlik'], a[href*='sergi'], a[href*='atolye']"
   max_detail: 10
+
+# ======================= KONYA =======================
+- name: Kültür Sanat Konya
+  city: Konya
+  venue: ""
+  lat: 37.87
+  lng: 32.48
+  url: https://www.kultursanatkonya.com/etkinlik-takvimi
+  base: https://www.kultursanatkonya.com
+  item: "a[href*='etkinlik'], a[href*='detay']"
+  max_detail: 12
+
+- name: Konya BB Etkinlikler
+  city: Konya
+  venue: ""
+  lat: 37.87
+  lng: 32.48
+  url: https://www.konya.bel.tr/etkinlikler
+  base: https://www.konya.bel.tr
+  item: "a[href*='etkinlik']"
+  max_detail: 10
+
+# ======================= GAZIANTEP =======================
+- name: Gaziantep Kültür Sanat
+  city: Gaziantep
+  venue: ""
+  lat: 37.07
+  lng: 37.38
+  url: https://www.gaziantepkultursanat.com/etkinlikler
+  base: https://www.gaziantepkultursanat.com
+  item: "a[href*='etkinlik-detay'], a[href*='etkinlik']"
+  max_detail: 12
+
+- name: Gaziantep Şehir Ajandası
+  city: Gaziantep
+  venue: ""
+  lat: 37.07
+  lng: 37.38
+  url: https://gaziantepajandasi.com/
+  base: https://gaziantepajandasi.com
+  item: "a[href*='etkinlik'], a[href*='detay'], article a"
+  max_detail: 10
+
+# ======================= KAYSERI =======================
+- name: Kayseri BB Etkinlikler
+  city: Kayseri
+  venue: ""
+  lat: 38.73
+  lng: 35.48
+  url: https://www.kayseri.bel.tr/etkinlikler
+  base: https://www.kayseri.bel.tr
+  item: "a[href*='etkinlik']"
+  max_detail: 12
+
+- name: EtkinliKayseri
+  city: Kayseri
+  venue: ""
+  lat: 38.73
+  lng: 35.48
+  url: https://etkinlikayseri.com/
+  base: https://etkinlikayseri.com
+  item: "a[href*='etkinlik'], a[href*='detay'], article a"
+  max_detail: 10
+
+# ======================= MALATYA =======================
+- name: Malatya BB Etkinlikler
+  city: Malatya
+  venue: ""
+  lat: 38.35
+  lng: 38.31
+  url: https://www.malatya.bel.tr/etkinlikler
+  base: https://www.malatya.bel.tr
+  item: "a[href*='etkinlik']"
+  max_detail: 12
+
+- name: Malatya Kültür AŞ
+  city: Malatya
+  venue: ""
+  lat: 38.35
+  lng: 38.31
+  url: https://www.malatyakultur.com/etkinlik-takvimi
+  base: https://www.malatyakultur.com
+  item: "a[href*='etkinlik'], a[href*='detay'], article a"
+  max_detail: 10
+
+# ======================= SANLIURFA =======================
+- name: Şanlıurfa BB Etkinlikler
+  city: Şanlıurfa
+  venue: ""
+  lat: 37.16
+  lng: 38.79
+  url: https://www.sanliurfa.bel.tr/etkinlikler
+  base: https://www.sanliurfa.bel.tr
+  item: "a[href*='etkinlik']"
+  max_detail: 12
+
+- name: Şanlıurfa Etkinlik
+  city: Şanlıurfa
+  venue: ""
+  lat: 37.16
+  lng: 38.79
+  url: https://sanliurfa.com/etkinlikler
+  base: https://sanliurfa.com
+  item: "a[href*='etkinlik'], article a"
+  max_detail: 10
+
+# ======================= MUGLA =======================
+- name: Muğla BB Etkinlikler
+  city: Muğla
+  venue: ""
+  lat: 37.22
+  lng: 28.36
+  url: https://mbbtv.mugla.bel.tr/etkinlik
+  base: https://mbbtv.mugla.bel.tr
+  item: "a[href*='etkinlik'], article a"
+  max_detail: 12
+
+- name: Menteşe Belediyesi
+  city: Muğla
+  venue: "Menteşe Belediyesi"
+  lat: 37.22
+  lng: 28.36
+  url: https://mentese.bel.tr/etkinlik-programi/
+  base: https://mentese.bel.tr
+  item: "a[href*='etkinlik'], a[href*='haber'], article a"
+  max_detail: 8
