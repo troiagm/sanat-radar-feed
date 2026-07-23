@@ -215,7 +215,7 @@
   lng: 38.31
   url: https://www.malatyakultur.com/etkinlik-takvimi
   base: https://www.malatyakultur.com
-  item: "a[href*='etkinlik'], a[href*='detay'], article a"
+  item: "a[href*='etkinlik'], a[href*='detay'], a[href*='takvim'], article a, .card a"
   max_detail: 10
 
 # ======================= SANLIURFA =======================
