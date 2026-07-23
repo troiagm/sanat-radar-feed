@@ -114,16 +114,6 @@
   max_detail: 6
 
 # ======================= BURSA =======================
-- name: Bursa Kültür AŞ
-  city: Bursa
-  venue: ""
-  lat: 40.19
-  lng: 29.06
-  url: https://bursakultur.com/TR/etkinlikler
-  base: https://bursakultur.com
-  item: "a[href*='etkinlikdetay'], a[href*='etkinlik']"
-  max_detail: 12
-
 - name: Nilüfer Belediyesi Bilet
   city: Bursa
   venue: "Nilüfer Belediyesi"
@@ -165,14 +155,14 @@
   item: "a[href*='etkinlik'], a[href*='detay']"
   max_detail: 12
 
-- name: Konya BB Etkinlikler
+- name: Konya Kültür Sanat
   city: Konya
   venue: ""
   lat: 37.87
   lng: 32.48
-  url: https://www.konya.bel.tr/etkinlikler
-  base: https://www.konya.bel.tr
-  item: "a[href*='etkinlik']"
+  url: https://www.konyakultursanat.com/
+  base: https://www.konyakultursanat.com
+  item: "a[href*='etkinlik'], a[href*='detay'], article a"
   max_detail: 10
 
 # ======================= GAZIANTEP =======================
@@ -218,16 +208,6 @@
   max_detail: 10
 
 # ======================= MALATYA =======================
-- name: Malatya BB Etkinlikler
-  city: Malatya
-  venue: ""
-  lat: 38.35
-  lng: 38.31
-  url: https://www.malatya.bel.tr/etkinlikler
-  base: https://www.malatya.bel.tr
-  item: "a[href*='etkinlik']"
-  max_detail: 12
-
 - name: Malatya Kültür AŞ
   city: Malatya
   venue: ""
@@ -239,16 +219,6 @@
   max_detail: 10
 
 # ======================= SANLIURFA =======================
-- name: Şanlıurfa BB Etkinlikler
-  city: Şanlıurfa
-  venue: ""
-  lat: 37.16
-  lng: 38.79
-  url: https://www.sanliurfa.bel.tr/etkinlikler
-  base: https://www.sanliurfa.bel.tr
-  item: "a[href*='etkinlik']"
-  max_detail: 12
-
 - name: Şanlıurfa Etkinlik
   city: Şanlıurfa
   venue: ""
@@ -265,10 +235,10 @@
   venue: ""
   lat: 37.22
   lng: 28.36
-  url: https://mbbtv.mugla.bel.tr/etkinlik
-  base: https://mbbtv.mugla.bel.tr
+  url: https://www.mugla.bel.tr/etkinlikler/
+  base: https://www.mugla.bel.tr
   item: "a[href*='etkinlik'], article a"
-  max_detail: 12
+  max_detail: 10
 
 - name: Menteşe Belediyesi
   city: Muğla
