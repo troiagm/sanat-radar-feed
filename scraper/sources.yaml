@@ -230,16 +230,6 @@
   max_detail: 10
 
 # ======================= MUGLA =======================
-- name: Muğla BB Etkinlikler
-  city: Muğla
-  venue: ""
-  lat: 37.22
-  lng: 28.36
-  url: https://www.mugla.bel.tr/etkinlikler/
-  base: https://www.mugla.bel.tr
-  item: "a[href*='etkinlik'], article a"
-  max_detail: 10
-
 - name: Menteşe Belediyesi
   city: Muğla
   venue: "Menteşe Belediyesi"
@@ -250,7 +240,7 @@
   item: "a[href*='etkinlik'], a[href*='haber'], article a"
   max_detail: 8
 
-  # ======================= ANTALYA =======================
+# ======================= ANTALYA =======================
 - name: Antalya BB Etkinlikler
   city: Antalya
   venue: ""
