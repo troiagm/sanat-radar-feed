@@ -88,7 +88,7 @@ def extract_date(text: str):
 def scrape(src: dict):
     url = src["url"]
     base = src.get("base") or url
-    r = requests.get(url, headers=HEADERS, timeout=25)
+    r = requests.get(url, headers=HEADERS, timeout=40)
     r.raise_for_status()
     soup = BeautifulSoup(r.text, "html.parser")
 
